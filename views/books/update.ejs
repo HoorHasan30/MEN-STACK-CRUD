@@ -7,5 +7,81 @@
 </head>
 <body>
     <h1>Update Book</h1>
+
+    
+    <form action="/all-books/<%= Book._id %>?_method=PUT" method="POST">
+        <!-- Title -->
+        <label for="title">Book Title:</label>
+        <input type="text" name="title" id="title" value=<%= Book.title %> />
+
+        <!-- Author -->
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" value=<%= Book.author %>/>
+
+        <!-- Pages -->
+        <label for="numOfPages">Number Of Pages:</label>
+        <input type="number" name="numOfPages" id="numOfPages" value="<%= Book.numOfPages %>"/>
+
+        <!-- genre -->
+        <label for="genre">Book Genre</label>
+        <select name="genre" id="genre">
+            <option value="Mystery">
+                <%= Book.genre == 'Mystery' ? 'selected' : '' %>
+                Mystery
+            </option>
+            <option value="Fantasy">
+                <%= Book.genre == 'Fantasy' ? 'selected' : '' %>
+                Fantasy
+            </option>
+            <option value="Science-Fiction">
+                <%= Book.genre == 'Science-Fiction' ? 'selected' : '' %>
+                Science-Fiction
+            </option>
+            <option value="YA">
+                <%= Book.genre == 'YA' ? 'selected' : '' %>
+                YA
+            </option>
+            <option value="Romance">
+                <%= Book.genre == 'Romance' ? 'selected' : '' %>
+                Romance
+            </option>
+            <option value="Non-Fiction">
+                <%= Book.genre == 'Non-Fiction' ? 'selected' : '' %>
+                Non-Fiction
+            </option>
+        </select>
+
+        <!-- Book Type -->
+        <label>Book Type:</label>
+
+        <input type="radio" id="physical" name="bookType" value="Physical Book" <%= Book.bookType == 'Physical Book' ? 'checked' : '' %>>
+        <label for="physical">Physical Book</label>
+
+        <input type="radio" id="ebook" name="bookType" value="E-Book" <%= Book.bookType == 'E-Book' ? 'checked' : '' %>>
+        <label for="ebook">E-Book</label>
+
+        <input type="radio" id="audio" name="bookType" value="Audio Book" <%= Book.bookType == 'Audio Book' ? 'checked' : '' %>>
+        <label for="audio">Audio Book</label>
+
+        <!-- description -->
+        <label for="description">Book Description:</label>
+        <textarea id="description" name="description">
+            <%= Book.description %>
+        </textarea>
+
+        <!-- Price -->
+        <label for="price">Price:</label>
+        <input type="number" step="any" name="price" id="price" value=<%= Book.price %> />
+
+        <!-- inStore -->
+        <label for="isInStore">Is In Store?</label>
+        <input type="checkbox" name="isInStore" id="isInStore"
+        <%= Book.isInStore ? 'checked' : ''  %>/>
+
+        <!-- button -->
+        <button type="submit" class="btn" id="save-btn">Save</button>
+
+    </form>
+
 </body>
 </html>
