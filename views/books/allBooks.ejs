@@ -9,7 +9,7 @@
     <h1>All Books</h1>
 
     <% allBooks.forEach( (book) => { %>
-        <a href="#"><%= book.title %></a>    
+        <a href="/all-books/<%= book._id %>"><%= book.title %></a>    
     <% }) %>
 </body>
 </html>

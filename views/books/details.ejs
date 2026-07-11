@@ -7,5 +7,17 @@
 </head>
 <body>
     <h1>Book Details</h1>
+
+    <p><%= Book.title %></p>
+    <p><%= Book.description %></p>
+
+
+
+    <form action="/all-books/<%= Book._id %>?_method=DELETE" method="POST">
+        <button class="btn" id="delete-btn">Delete</button>
+    </form>
+    <form action="/all-books/<%= Book._id %>/edit" method="GET">
+        <button class="btn" id="edit-btn">Edit</button>
+    </form>
 </body>
 </html>

@@ -28,7 +28,7 @@ const bookSchema = new mongoose.Schema (
         description: { // text
             type: String
         }, 
-        Price: { //text
+        price: { //text
             type: Number,
             min: 1
         }, // checkbox
