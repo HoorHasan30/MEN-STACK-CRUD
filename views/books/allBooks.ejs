@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Books</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
 
-    <h1>All Books</h1>
+    <main id="all-books">
+        <h1>All Books</h1>
 
-    <% allBooks.forEach( (book) => { %>
-        <a href="/all-books/<%= book._id %>"><%= book.title %></a>    
-    <% }) %>
+        <div id="all-cards">
+            <% allBooks.forEach( (book) => { %>
+                <a href="/all-books/<%= book._id %>" class="card">
+
+                    <div class="icon-header">
+                        <p>🕮</p>
+                    </div>
+
+                    <div class="title">
+                        <p><%= book.title %></p> 
+                    </div>
+
+                    <div class="by">
+                        <p>By: <span class="author"><%= book.author %> </span></p>
+                    </div>
+
+                    <div class="isInStore">
+                        <% if(book.isInStore){ %>
+                            <span class="in-store">Available</span>
+                        <%} else { %>
+                            <span class="not-in-store">Not Available</span>
+                        <%} %>
+                    </div>
+                     
+                </a>
+            <% }) %>
+        </div>
+        
+    </main>
+
+    <footer>
+        <a href="/all-books/new-book">+</a>
+    </footer>
+
+    
 </body>
 </html>

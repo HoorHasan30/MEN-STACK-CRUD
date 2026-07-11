@@ -37,6 +37,8 @@ nav a {
 main{
     flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
     margin-top: 1%;
 }
@@ -58,8 +60,6 @@ main{
     /* background: linear-gradient(var(--brown) 0%, #918378 70% ,var(--cream) 100%); */
 
     justify-content: center; 
-    align-items: center;
-    flex-direction: column;
     line-height: 0.3;
 }
 #bookIcon{
@@ -94,3 +94,135 @@ main{
     width: 15%;
 }
 
+/* All Books */
+#all-books{
+    justify-content: flex-start;
+}
+#all-books h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+#all-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.card{
+    text-decoration: none;
+    width: 15rem;
+    height: 20rem;
+
+    /* background-color: var(--brown); */
+    border: 0.3rem solid var(--brown);
+    box-shadow: 0 0.25rem var(--brown_s);
+    border-radius: 2rem;
+    color: var(--cream);
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    margin: 1%;
+    padding: 0.5rem;
+    padding-bottom: 0;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+.icon-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 6rem;
+
+    margin-bottom: 1rem;
+}
+.icon-header p {
+    margin: 0;
+    color: var(--brown);
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+.title p {
+    color: var(--brown);
+
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.by{
+    text-align: center;
+    color: var(--brown)
+}
+.author {
+    font-weight: 600;
+}
+.isInStore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+}
+.in-store, .not-in-store{
+    color: var(--cream);
+    border-radius: 2rem;
+
+    font-size: 0.8rem;
+    padding: 0.2rem;
+} 
+.in-store{
+    background-color: var(--green);
+    width: 5rem;
+}
+.not-in-store{
+    background-color: var(--pink);
+    width: 7rem;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: auto;
+}
+footer a {
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-weight: bold;
+    color: var(--cream);
+    font-size: 2rem;
+    
+    background-color: var(--green);
+    border-radius: 4rem;
+    box-shadow: 0 0.2rem var(--green_s);
+
+    height: 2.5%;
+    width: 2.5%;
+    aspect-ratio: 1;
+
+    padding: 1%;
+    margin: 2%;
+}
