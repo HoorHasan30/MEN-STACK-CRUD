@@ -6,14 +6,24 @@
     --pink : #A37C76;
     --orange : #D9B382;
     --cream : #eae3d9;
+
+    /* Shadows */
+    --brown_s : rgba(61, 43, 31, 0.5);
+    --green_s : rgba(142, 150, 128, 0.5);
+    --pink_s : rgba(163, 124, 118, 0.5);
+    --orange_s : rgba(217, 179, 130, 0.5);
 }
 html, body {
     margin: 0;
     min-height: 100vh;
 
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--cream);
 
     font-family: "Old Standard TT", system-ui;
+    color: var(--brown)
 }
 nav{
     background-color: var(--brown);
@@ -24,3 +34,63 @@ nav a {
     color: var(--cream);
     padding: 0.8%;
 }
+main{
+    flex: 1;
+    display: flex;
+
+    margin-top: 1%;
+}
+.btn{
+    font-family: "Old Standard TT", system-ui;
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 1rem;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+/* Home Page */
+#home{
+    margin-top: 0;
+
+    /* background: linear-gradient(var(--brown) 0%, #918378 70% ,var(--cream) 100%); */
+
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    line-height: 0.3;
+}
+#bookIcon{
+    width: 15%;
+    margin-bottom: 1rem;
+}
+#home h1{
+    font-size: 4rem;
+}
+#home p{
+    font-size: 1.3rem;
+}
+#browse-btn{
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 1rem;
+    color: var(--brown);
+
+    background-color: var(--orange);
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem var(--orange_s);
+
+    padding: 0.5%;
+    margin-top: 1rem;
+
+    height: 1rem;
+    width: 15%;
+}
+
