@@ -234,11 +234,15 @@ footer a {
     margin: 2%;
 }
 
-/* Add Book & Update Book*/
-#new-book{
+/* Add Book & Book Details & Update Book*/
+#new-book, #update{
     justify-content: center;
 }
-#new-book h1{
+#details {
+    justify-content: flex-start;
+}
+
+#new-book h1, #details h1, #update h1{
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -247,7 +251,7 @@ footer a {
 .form-card{
     width: 50rem;
     height: 30rem;
-    
+
     color: var(--brown);
     
     display: flex;
@@ -327,4 +331,58 @@ footer a {
 
     color: var(--pink);
 }
+
+/* Details */
+#details .form-card{
+    height: auto;
+    min-height: 25rem;
+
+    align-items: center;
+}
+#details .form-card p{
+    width: 100%;
+    margin: .6rem 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.btns-group-details{
+display: flex;
+justify-content: center;
+align-items: center;
+
+gap: 1.5rem;
+}
+
+.detail-label{
+    font-weight: 600;
+    color: var(--brown_s);
+}
+#yes{
+    color: var(--green);
+    font-weight: 600;
+}
+#no{
+    color: var(--pink);
+    font-weight: 600;
+}
+#delete-btn{
+    background-color: var(--pink);
+    box-shadow: 0 0.2rem var(--pink_s);
+    
+    color: var(--cream);
+
+    width: 5rem;
+}
+#edit-btn{
+    background-color: var(--orange);
+    box-shadow: 0 0.2rem var(--orange_s);
+    
+    color: var(--cream);
+
+    width: 5rem;
+}
+
+
+
+
 

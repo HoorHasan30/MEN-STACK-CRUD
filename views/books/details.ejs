@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
-    <h1>Book Details</h1>
+    <main id="details">
+        <h1><%= Book.title %></h1>
 
-    <p><%= Book.title %></p>
-    <p></p>
+        <div class="form-card">
+            <p><span class="detail-label">Book Author: </span><%= Book.author %></p>
+            <p><span class="detail-label">Number of Pages: </span><%= Book.numOfPages %></p>
+            <p><span class="detail-label">Genre: </span><%= Book.genre %></p>
+            <p><span class="detail-label">Book Type: </span><%= Book.bookType %></p>
+            <p><span class="detail-label">Description: </span><%= Book.description %></p>
+            <p><span class="detail-label">Price: </span><%= Book.price %></p>
+            <p><span class="detail-label">Available in Store? </span>
+                <% if (Book.isInStore) { %>
+                    <span id="yes">Yes</span>
+                <% } else { %>
+                    <span id="no">No</span>
+                <% } %>
+            </p>
 
+            <div class="btns-group-details">
+                <form action="/all-books/<%= Book._id %>?_method=DELETE" method="POST">
+                    <button class="btn" id="delete-btn">Delete</button>
+                </form>
+                <form action="/all-books/<%= Book._id %>/edit" method="GET">
+                    <button class="btn" id="edit-btn">Edit</button>
+                </form>
+            </div>
 
-    <form action="/all-books/<%= Book._id %>?_method=DELETE" method="POST">
-        <button class="btn" id="delete-btn">Delete</button>
-    </form>
-    <form action="/all-books/<%= Book._id %>/edit" method="GET">
-        <button class="btn" id="edit-btn">Edit</button>
-    </form>
+        </div>
+        
+        
+    </main>
 </body>
 </html>
