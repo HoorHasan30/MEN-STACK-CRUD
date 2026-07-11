@@ -48,6 +48,10 @@ main{
 
     border: none;
     border-radius: 1rem;
+
+    padding: 0.35rem;
+
+    box-sizing: border-box;
 }
 .btn:hover{
     cursor: pointer;
@@ -137,6 +141,9 @@ main{
 
     box-sizing: border-box;
 }
+.card:hover{
+    box-shadow: 0 .8rem 1rem rgba(0,0,0,.2);
+}
 .icon-header{
     display: flex;
     justify-content: center;
@@ -184,16 +191,16 @@ main{
     color: var(--cream);
     border-radius: 2rem;
 
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.2rem;
 } 
 .in-store{
     background-color: var(--green);
-    width: 5rem;
+    width: 8rem;
 }
 .not-in-store{
     background-color: var(--pink);
-    width: 7rem;
+    width: 8rem;
 }
 
 footer{
@@ -226,3 +233,98 @@ footer a {
     padding: 1%;
     margin: 2%;
 }
+
+/* Add Book & Update Book*/
+#new-book{
+    justify-content: center;
+}
+#new-book h1{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form */
+.form-card{
+    width: 50rem;
+    height: 30rem;
+    
+    color: var(--brown);
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: center;
+
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1.3rem;
+    padding-bottom: 0;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+
+    font-size: 1rem;
+}
+.form-card form{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.form-group label{
+    width: 25%;
+    text-align: right;
+    margin-right: 1rem;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea{
+    width: 70%;
+
+    font-size: 1rem;
+    font-family: "Old Standard TT", system-ui;
+    color: var(--brown);
+
+    border: 0.05rem solid var(--brown);
+    border-radius: 1.05rem;
+
+    padding: 0.3rem;
+}
+.btns-group{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+#add-btn{
+    background-color: var(--green);
+    box-shadow: 0 0.2rem var(--green_s);
+    
+    color: var(--cream);
+
+    width: 5rem;
+}
+
+#cancel-btn{
+    text-decoration: none;
+
+    color: var(--pink);
+}
+

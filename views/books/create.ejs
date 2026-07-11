@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Book</title>
+    <title>New Book</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <%- include('../partials/navbar.ejs') %>
-    <h1>Add A New Book</h1>
+        <main id="new-book">
+            <h1>🕮 Add A New Book</h1>
 
-    <form action="/all-books" method="POST">
-        <!-- Title -->
-        <label for="title">Book Title:</label>
-        <input type="text" name="title" id="title"/>
+            <div class="form-card">
+                <form action="/all-books" method="POST">
+                    <div class="form-group">
+                        <!-- Title -->
+                        <label for="title">Book Title:</label>
+                        <input type="text" name="title" id="title" />
+                    </div>
 
-        <!-- Author -->
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author"/>
+                    <div class="form-group">
+                        <!-- Author -->
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author" />
+                    </div>
 
-        <!-- Pages -->
-        <label for="numOfPages">Number Of Pages:</label>
-        <input type="number" name="numOfPages" id="numOfPages"/>
+                    <div class="form-group">
+                        <!-- Pages -->
+                        <label for="numOfPages">Number Of Pages:</label>
+                        <input type="number" name="numOfPages" id="numOfPages" />
+                    </div>
 
-        <!-- genre -->
-        <label for="genre">Book Genre</label>
-        <select name="genre" id="genre">
-            <option value="Mystery">Mystery</option>
-            <option value="Fantasy">Fantasy</option>
-            <option value="Science-Fiction">Science-Fiction</option>
-            <option value="YA">YA</option>
-            <option value="Romance">Romance</option>
-            <option value="Non-Fiction">Non-Fiction</option>
-        </select>
+                    <div class="form-group">
+                        <!-- genre -->
+                        <label for="genre">Book Genre</label>
+                        <select name="genre" id="genre">
+                            <option value="Mystery">Mystery</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Science-Fiction">Science-Fiction</option>
+                            <option value="YA">YA</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                        </select>
+                    </div>
 
-        <!-- Book Type -->
-        <label>Book Type:</label>
+                    <div class="form-group">
+                        <!-- Book Type -->
+                        <label>Book Type:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="physical" name="bookType" value="Physical Book">
+                        <label for="physical">Physical Book</label>
 
-        <input type="radio" id="physical" name="bookType" value="Physical Book">
-        <label for="physical">Physical Book</label>
+                        <input type="radio" id="ebook" name="bookType" value="E-Book">
+                        <label for="ebook">E-Book</label>
 
-        <input type="radio" id="ebook" name="bookType" value="E-Book">
-        <label for="ebook">E-Book</label>
+                        <input type="radio" id="audio" name="bookType" value="Audio Book">
+                        <label for="audio">Audio Book</label>
+                        </div>
+                    </div>
 
-        <input type="radio" id="audio" name="bookType" value="Audio Book">
-        <label for="audio">Audio Book</label>
+                    <div class="form-group">
+                        <!-- description -->
+                        <label for="description">Book Description:</label>
+                        <textarea id="description" name="description"></textarea>
+                    </div>
 
-        <!-- description -->
-        <label for="description">Book Description:</label>
-        <textarea id="description" name="description"></textarea>
+                    <div class="form-group">
+                        <!-- Price -->
+                        <label for="price">Price:</label>
+                        <input type="number" step="any" name="price" id="price" />
+                    </div>
 
-        <!-- Price -->
-        <label for="price">Price:</label>
-        <input type="number" step="any" name="price" id="price"/>
+                    <div class="form-group">
+                        <!-- inStore -->
+                        <label for="isInStore">Available In Store?</label>
+                        <input type="checkbox" name="isInStore" id="isInStore" />
+                    </div>
 
-        <!-- inStore -->
-        <label for="isInStore">Is In Store?</label>
-        <input type="checkbox" name="isInStore" id="isInStore"/>
-
-        <!-- button -->
-        <button type="submit" class="btn" id="add-btn">Add</button>
-
-    </form>
+                    <div class="btns-group">
+                        <!-- button -->
+                        <button type="submit" class="btn" id="add-btn">Add</button>
+                        <a href="/all-books" class="btn" id="cancel-btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
 </body>
+
 </html>
