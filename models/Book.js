@@ -7,20 +7,20 @@ const bookSchema = new mongoose.Schema (
             type: String,
             required: true
         },
+        author: { // text
+            type: String,
+            required: true
+        },
         numOfPages: { // text
             type: Number,
             required: true,
         },
         genre: { // select
             type: String,
-            enum: ['Mystery', 'Fantasy', 'Science-Fiction', 'YA'],
+            enum: ['Mystery', 'Fantasy', 'Science-Fiction', 'YA', 'Romance', 'Non-Fiction'],
             required: true,
         },
-        author: { // text
-            type: String,
-            required: true
-        },
-        type: { // radio btn
+        bookType: { // radio btn
             type: String,
             required: true,
             enum: ['Physical Book', 'E-Book', 'Audio Book']
@@ -28,10 +28,10 @@ const bookSchema = new mongoose.Schema (
         description: { // text
             type: String
         }, 
-        Price: { //
+        Price: { //text
             type: Number,
             min: 1
-        },
+        }, // checkbox
         isInStore: {
             type: Boolean,
             required: true
@@ -41,4 +41,4 @@ const bookSchema = new mongoose.Schema (
 
 const Book = mongoose.model('Book', bookSchema)
 
-module.export = Book
+module.exports = Book

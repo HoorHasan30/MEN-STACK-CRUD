@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Book</title>
+</head>
+<body>
+    <h1>Add A New Book</h1>
+
+    <form action="/all-books" method="POST">
+        <!-- Title -->
+        <label for="title">Book Title:</label>
+        <input type="text" name="title" id="title"/>
+
+        <!-- Author -->
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author"/>
+
+        <!-- Pages -->
+        <label for="numOfPages">Number Of Pages:</label>
+        <input type="number" name="numOfPages" id="numOfPages"/>
+
+        <!-- genre -->
+        <label for="genre">Book Genre</label>
+        <select name="genre" id="genre">
+            <option value="Mystery">Mystery</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Science-Fiction">Science-Fiction</option>
+            <option value="YA">YA</option>
+            <option value="Romance">Romance</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+        </select>
+
+        <!-- Book Type -->
+        <label>Book Type:</label>
+
+        <input type="radio" id="physical" name="bookType" value="Physical Book">
+        <label for="physical">Physical Book</label>
+
+        <input type="radio" id="ebook" name="bookType" value="E-Book">
+        <label for="ebook">E-Book</label>
+
+        <input type="radio" id="audio" name="bookType" value="Audio Book">
+        <label for="audio">Audio Book</label>
+
+        <!-- description -->
+        <label for="description">Book Description:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <!-- Price -->
+        <label for="price">Price:</label>
+        <input type="number" step="any" name="price" id="price"/>
+
+        <!-- inStore -->
+        <label for="isInStore">Is In Store?</label>
+        <input type="checkbox" name="isInStore" id="isInStore"/>
+
+        <!-- button -->
+        <button type="submit" class="btn" id="add-btn">Add</button>
+
+    </form>
+</body>
+</html>
