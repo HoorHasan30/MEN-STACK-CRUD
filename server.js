@@ -21,7 +21,7 @@ connectToDB()
 // GET: Landing Page (Home) 
 app.get('/', 
     (req, res) => {
-        res.render('home.ejs')    
+        res.render('index.ejs')    
     }
 )
 
