@@ -6,11 +6,11 @@
     <title>Book Details</title>
 </head>
 <body>
+    <%- include('../partials/navbar.ejs') %>
     <h1>Book Details</h1>
 
     <p><%= Book.title %></p>
-    <p><%= Book.description %></p>
-
+    <p></p>
 
 
     <form action="/all-books/<%= Book._id %>?_method=DELETE" method="POST">
