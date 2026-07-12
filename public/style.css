@@ -12,6 +12,7 @@
     --green_s : rgba(142, 150, 128, 0.5);
     --pink_s : rgba(163, 124, 118, 0.5);
     --orange_s : rgba(217, 179, 130, 0.5);
+    -webkit-tap-highlight-color: transparent;
 }
 html, body {
     margin: 0;
